@@ -1,0 +1,61 @@
+﻿@model IEnumerable<CadeMeuBilhete.Models.Funcionario_Empresa>
+
+<h2>Listar</h2>
+
+<h2 class="text=danger text-center text-uppercase bg-info"> Lista de Funcionários</h2>
+
+<hr />
+<p class="text-success">
+    O código "model IEnumerable < Login.Models.usuario > indica a qual view qual o model será utilizado, <br />
+    no caso do nosso exemplo iremos utilizar o model usuário ("tabela" usuário) <br />
+    O helper Html.DisplayNameFor retorna o nome do campo (atributo) da Model. <br />
+    O Html.DisplayFor retorna o conteúdo do campo da Model.
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CPF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Observacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cargo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayNameFor(model => model.CPF)
+    </td>
+    <td>
+        @Html.DisplayNameFor(model => model.Nome)
+    </td>
+    <td>
+        @Html.DisplayNameFor(model => model.RG)
+    </td>
+    <td>
+        @Html.DisplayNameFor(model => model.Observacao)
+    </td>
+    <td>
+        @Html.DisplayNameFor(model => model.Cargo)
+    </td>
+    <td>
+        @Html.DisplayNameFor(model => model.Status)
+    </td>
+</tr>
+    }
+</table>
+
